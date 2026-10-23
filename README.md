@@ -4,6 +4,12 @@ Aplicación web hecha con React (Vite) para registrar resultados de partidos de 
 
 **Demo en línea:** https://dgonav.github.io/panel-futbol/
 
+## Entregables
+
+- Aplicación desplegada: https://dgonav.github.io/panel-futbol/
+- Video de demostración: [entregables/video_panel_futbol.mp4](entregables/video_panel_futbol.mp4)
+- Explicación (PDF): [entregables/Actividad_20_Panel_Futbol.pdf](entregables/Actividad_20_Panel_Futbol.pdf)
+
 ## Requisitos
 
 - Node.js 18 o superior (incluye npm)
