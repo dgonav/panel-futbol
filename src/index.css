@@ -162,6 +162,7 @@ button:hover {
 
 .marcador {
   font-size: 26px;
+  white-space: nowrap;
   background: #0b3d2e;
   color: white;
   padding: 4px 14px;
@@ -248,5 +249,25 @@ tbody tr:last-child td:first-child {
   .lado {
     width: 80px;
     font-size: 12px;
+  }
+
+  .marcador {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+
+  .fila-historial {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  th, td {
+    padding: 6px 3px;
+    font-size: 12px;
+  }
+
+  .nombre-tabla img {
+    width: 18px;
+    margin-right: 4px;
   }
 }
