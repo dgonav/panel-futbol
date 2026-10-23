@@ -76,6 +76,12 @@ h2 {
   gap: 4px;
 }
 
+.formulario input,
+.formulario select {
+  width: 100%;
+  min-width: 0;
+}
+
 input, select, button {
   padding: 8px;
   font-size: 15px;
