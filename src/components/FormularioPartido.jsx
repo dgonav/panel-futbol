@@ -45,7 +45,7 @@ function FormularioPartido({ equipos, agregarPartido }) {
   return (
     <section className="caja">
       <h2>Registrar partido</h2>
-      <form onSubmit={registrar} className="formulario">
+      <form onSubmit={registrar} className="formulario" noValidate>
         <label>
           Local
           <select value={localId} onChange={(e) => setLocalId(e.target.value)}>
