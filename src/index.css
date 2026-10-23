@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #eef2ee;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f1f4f2;
+  color: #1c2a24;
 }
 
 .app {
@@ -12,19 +17,25 @@ body {
 
 h1 {
   text-align: center;
-  color: #1b5e20;
+  color: white;
+  background: linear-gradient(90deg, #0b3d2e, #146b4a);
+  padding: 18px;
+  border-radius: 12px;
+  margin: 0 0 15px;
 }
 
 h2 {
   margin-top: 0;
+  color: #0b3d2e;
+  font-size: 20px;
 }
 
 .caja {
   background: white;
-  border-radius: 8px;
-  padding: 15px;
+  border-radius: 12px;
+  padding: 18px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(11, 61, 46, 0.08);
 }
 
 .equipos {
@@ -35,9 +46,16 @@ h2 {
 
 .equipo {
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
+  border: 1px solid #e1e8e4;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fafcfb;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.equipo:hover {
+  transform: translateY(-3px);
+  border-color: #2ecc71;
 }
 
 .equipo img {
@@ -45,8 +63,9 @@ h2 {
 }
 
 .equipo p {
-  margin: 5px 0 0;
+  margin: 6px 0 0;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .columnas {
@@ -59,20 +78,17 @@ h2 {
   min-width: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .formulario {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
 }
 
 .formulario label {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  font-weight: 600;
   gap: 4px;
 }
 
@@ -83,17 +99,27 @@ h2 {
 }
 
 input, select, button {
-  padding: 8px;
+  padding: 9px;
   font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #cdd8d2;
+  border-radius: 8px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2ecc71;
 }
 
 button {
-  background: #2e7d32;
+  background: #14883e;
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0b3d2e;
 }
 
 .formulario button {
@@ -101,12 +127,15 @@ button {
 }
 
 .error {
-  color: #c62828;
+  color: #d32f2f;
   font-weight: bold;
+  background: #fdecec;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
 .vacio {
-  color: #777;
+  color: #7b8a83;
 }
 
 .resultado {
@@ -124,6 +153,7 @@ button {
   width: 120px;
   text-align: center;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .lado img {
@@ -131,18 +161,29 @@ button {
 }
 
 .marcador {
-  font-size: 24px;
+  font-size: 26px;
+  background: #0b3d2e;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 8px;
 }
 
 .fila-historial {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
-  padding: 8px 0;
+  border-bottom: 1px solid #edf1ef;
+  padding: 10px 0;
 }
 
 .eliminar {
-  background: #c62828;
+  background: transparent;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.eliminar:hover {
+  background: #d32f2f;
+  color: white;
 }
 
 .tabla-contenedor {
@@ -156,18 +197,32 @@ table {
 }
 
 th, td {
-  padding: 6px;
+  padding: 8px 6px;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #edf1ef;
 }
 
 th {
-  background: #2e7d32;
+  background: #0b3d2e;
   color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #f6f9f7;
+}
+
+/* Primer y último lugar de la tabla */
+tbody tr:first-child td:first-child {
+  border-left: 4px solid #2ecc71;
+}
+
+tbody tr:last-child td:first-child {
+  border-left: 4px solid #e74c3c;
 }
 
 .nombre-tabla {
   text-align: left;
+  font-weight: 600;
 }
 
 .nombre-tabla img {
